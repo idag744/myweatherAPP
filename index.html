@@ -13,30 +13,34 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <input
-            type="search"
-            placeholder="Type a city.."
-            autofocus="on"
-            autocomplete="off"
-            id="city-input"
-            class="form-control shadow-sm"
-          />
+      <form class="searchForm">
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="search"
+              placeholder="Type a city.."
+              autofocus="on"
+              autocomplete="off"
+              id="city-input"
+              class="form-control shadow-sm"
+            />
+          </div>
+
+          <div class="col-3">
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-primary shadow-sm w-100"
+            />
+          </div>
+
+          <div class="col-3">
+            <button class="btn btn-success w-100" id="current-location-button">
+              Current
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="col-3">
-        <input
-          type="submit"
-          value="Search"
-          class="form-control btn btn-primary shadow-sm w-100"
-        />
-      </div>
-      <div class="col-3">
-        <button class="btn btn-success w-100" id="current-location-button">
-          Current
-        </button>
-      </div>
+      </form>
       <h1 id="city">New York</h1>
       <ul>
         <li id="date">Tuesday 06:40</li>
@@ -51,12 +55,12 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-6">
-        <ul>
-          <li>Humidity: <span id="humidity">49</span>%</li>
-          <li>Wind: <span id="wind">9</span> km/h</li>
-        </ul>
+        <div class="col-6">
+          <ul>
+            <li>Humidity: <span id="humidity">49</span>%</li>
+            <li>Wind: <span id="wind">9</span> km/h</li>
+          </ul>
+        </div>
       </div>
     </div>
     <script
