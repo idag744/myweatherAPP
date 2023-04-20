@@ -10,56 +10,63 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <form class="searchForm">
-        <div class="row">
-          <div class="col-6">
-            <input
-              type="search"
-              placeholder="Type a city.."
-              autofocus="on"
-              autocomplete="off"
-              id="city-input"
-              class="form-control shadow-sm"
-            />
-          </div>
+      <div class="weather-app">
+        <form class="searchForm">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+                maxlength="100px;"
+              />
+            </div>
 
-          <div class="col-3">
-            <input
-              type="submit"
-              value="Search"
-              class="form-control btn btn-primary shadow-sm w-100"
-            />
-          </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
 
-          <div class="col-3">
-            <button class="btn btn-success w-100" id="current-location-button">
-              Current
-            </button>
-          </div>
-        </div>
-      </form>
-      <h1 id="city">New York</h1>
-      <ul>
-        <li id="date">Tuesday 06:40</li>
-        <li id="description">Clouds</li>
-      </ul>
-      <div class="row">
-        <div class="col-6">
-          <div class="clearfix">
-            <div class="float-left">
-              <span class="temperature" id="temperature">12</span
-              ><span class="units">°C</span>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
             </div>
           </div>
-        </div>
-        <div class="col-6">
-          <ul>
-            <li>Humidity: <span id="humidity">49</span>%</li>
-            <li>Wind: <span id="wind">9</span> km/h</li>
-          </ul>
+        </form>
+        <h1 id="city">New York</h1>
+        <ul>
+          <li id="date">Tuesday 06:40</li>
+          <li id="description">Clouds</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="temperature" id="temperature">12</span
+                ><span class="units">°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity">49</span>%</li>
+              <li>Wind: <span id="wind">9</span> km/h</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
