@@ -12,6 +12,6 @@ function search(event) {
   }
 }
 
-let searchCity = document.querySelector("#searchForm");
+let searchCity = document.querySelector("#searchingForm");
 
 searchCity.addEventListener("submit", search);
