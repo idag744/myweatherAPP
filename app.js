@@ -1,3 +1,5 @@
+let apikey = "1f6442bbd1f73e321e5a2d48f43396d3";
+
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#city-input");
@@ -5,7 +7,6 @@ function search(event) {
   if (searchInput.value) {
     h1.innerHTML = `${searchInput.value}`;
   } else {
-    h1.innerHTML = null;
     alert("please enter a valid city name...");
   }
 }
