@@ -1,6 +1,3 @@
-let apikey = "1f6442bbd1f73e321e5a2d48f43396d3";
-let apiUrl =
-  "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}";
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#city-input");
@@ -15,3 +12,12 @@ function search(event) {
 let searchCity = document.querySelector("#searchingForm");
 
 searchCity.addEventListener("submit", search);
+
+let apikey = "1f6442bbd1f73e321e5a2d48f43396d3";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=${apikey}`;
+
+function showTemperature(response) {
+  let temp = document.querySelector("#temperature");
+  temp.innerHTML = response.data.main.temp;
+}
+axios.get(`${apiUrl}&appid=${apikey}`).then(showTemperature);
