@@ -21,6 +21,7 @@ let url =
   "https://api.openweathermap.org/data/2.5/weather?q=London&appid={API key}";
 
 function showTemperature(response) {
+  console.log(response);
   let temp = document.querySelector("#temperature");
   temp.innerHTML = response.data.main.temp;
 }
