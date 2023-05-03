@@ -14,7 +14,11 @@ let searchCity = document.querySelector("#searchingForm");
 searchCity.addEventListener("submit", search);
 
 let apikey = "1f6442bbd1f73e321e5a2d48f43396d3";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=${apikey}`;
+let apiUrl =
+  "http://api.openweathermap.org/data/2.5/weather?q=Sydney&units=metric&APPID=a2e49dcccda9de726c4b47b8edd7a944";
+
+let url =
+  "https://api.openweathermap.org/data/2.5/weather?q=London&appid={API key}";
 
 function showTemperature(response) {
   let temp = document.querySelector("#temperature");
