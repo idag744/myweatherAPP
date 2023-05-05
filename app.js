@@ -1,5 +1,5 @@
 let apikey = "1f6442bbd1f73e321e5a2d48f43396d3";
-let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${response.data.name}&units=metric&APPID=${apikey}`;
+let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${apikey}`;
 
 function showTemperature(response) {
   console.log(response);
@@ -8,7 +8,6 @@ function showTemperature(response) {
 
   let info = document.querySelector("#mainTemperature");
 }
-axios.get(`${apiUrl}&appid=${apikey}`).then(showTemperature);
 
 function search(event) {
   event.preventDefault();
@@ -22,3 +21,4 @@ function search(event) {
 }
 let city = response.data.main.name;
 searchCity.addEventListener("submit", search);
+axios.get(`${apiUrl}&appid=${apikey}`).then(showTemperature);
