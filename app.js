@@ -1,24 +1,14 @@
 let apikey = "1f6442bbd1f73e321e5a2d48f43396d3";
-let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${apikey}`;
+
+let city = document.querySelector("#city-input").value;
+let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${apikey}&units=metric`;
 
 function showTemperature(response) {
   console.log(response);
 
-  info.innerHTML = response.data.main.temp;
-
-  let info = document.querySelector("#mainTemperature");
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#mainTemperature").innerHTML = math.round(
+    response.data.main.temp
+  );
 }
-
-function search(event) {
-  event.preventDefault();
-
-  let city = document.querySelector("#city-input");
-
-  let h1 = document.querySelector("h1");
-  if (city.value) {
-    h1.innerHTML = `${city.value}`;
-  }
-}
-let city = response.data.main.name;
-searchCity.addEventListener("submit", search);
 axios.get(`${apiUrl}&appid=${apikey}`).then(showTemperature);
