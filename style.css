@@ -42,3 +42,7 @@ li {
   position: relative;
   top: -34px;
 }
+a {
+  font-size: 12pt;
+  color: blue;
+}
