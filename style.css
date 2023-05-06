@@ -43,10 +43,10 @@ li {
   top: -34px;
 }
 a {
-  font-size: 12pt;
   color: blue;
 }
 footer {
+  font-size: 10pt;
   display: block;
   margin: 0 auto;
   max-width: 600px;
