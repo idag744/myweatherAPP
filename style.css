@@ -46,3 +46,7 @@ a {
   font-size: 12pt;
   color: blue;
 }
+footer {
+  display: block;
+  margin: 0 auto;
+}
