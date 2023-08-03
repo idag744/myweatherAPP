@@ -59,13 +59,22 @@
           <div class="col-6">
             <div class="clearfix">
               <div class="float-left">
+                <img
+                  id="icon"
+                  class="float-left"
+                  src="https://openweathermap.org/img/wn/10d@2x.png"
+                  alt=""
+                />
+
                 <span class="temperature" id="mainTemperature"></span>
-                <span class="units">°C</span>
+
+                <span class="units">°C| °F</span>
               </div>
             </div>
           </div>
           <div class="col-6">
             <ul>
+              <li>Precipitation: <span id="precipitation">%</span></li>
               <li>Humidity: <span id="humidity"></span>%</li>
 
               <li>Wind: <span id="wind"></span> km/h</li>

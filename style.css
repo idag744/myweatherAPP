@@ -51,3 +51,7 @@ footer {
   margin: 0 auto;
   max-width: 600px;
 }
+img {
+  max-width: 80px;
+  margin-bottom: 30px;
+}
