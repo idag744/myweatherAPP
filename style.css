@@ -55,3 +55,14 @@ img {
   max-width: 80px;
   margin-bottom: 30px;
 }
+.weather-data {
+  text-decoration: none;
+}
+.weather-data .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.weather-data .active:hover {
+  text-decoration: none;
+}
