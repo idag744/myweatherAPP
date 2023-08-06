@@ -66,3 +66,25 @@ img {
 .weather-data .active:hover {
   text-decoration: none;
 }
+
+.daily-forcast {
+  text-align: center;
+}
+.week-days {
+  font-size: 16pt;
+  opacity: 0.6;
+}
+.daily-forcast-icon {
+  max-width: 36px;
+  margin-bottom: 5px;
+}
+.daily-temperature-max {
+  margin-top: 40px;
+  font-size: 10pt;
+  opacity: 0.8;
+}
+.daily-temperature-min {
+  margin-top: 40px;
+  font-size: 10pt;
+  opacity: 0.6;
+}
