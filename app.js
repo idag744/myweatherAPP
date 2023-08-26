@@ -94,6 +94,11 @@ function displayCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function displayDailyForcast() {
+  let forcastElement = document.querySelector("#forcast");
+  forcastElement = "forcast";
+}
+
 let celsiusTemperature = null;
 
 let searchInput = document.querySelector("#searchingForm");
