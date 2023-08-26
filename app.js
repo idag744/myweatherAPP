@@ -96,7 +96,29 @@ function displayCelsius(event) {
 
 function displayDailyForcast() {
   let forcastElement = document.querySelector("#forcast");
-  forcastElement = "forcast";
+  let forcastHtml = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri"];
+  days.forEach(function (day) {
+    forcastHtml =
+      forcastHtml +
+      `
+            <div class="col-2"> 
+              <div class="week-days">${day}</div>
+              <img
+                class="daily-forcast-icon"
+                src="https://openweathermap.org/img/wn/01d@2x.png"
+                alt=""
+              />
+              <div class="daily-temperature"></div>
+              <span id="daily-temperature-max">18°</span>
+              <span id="daily-temperature-min">12°</span>
+            </div>
+          `;
+  });
+
+  forcastHtml = forcastHtml + `</div>`;
+
+  forcastElement.innerHTML = forcastHtml;
 }
 
 let celsiusTemperature = null;
@@ -114,3 +136,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 search("New York");
+displayDailyForcast();
