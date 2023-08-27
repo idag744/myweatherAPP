@@ -30,9 +30,10 @@ function search(city) {
 }
 
 function getForcast(coordinates) {
-  let apikey = "dd13320e3c3ba6c3bc970f09d672c7de";
-  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apikey}`;
+  let apikey = "515c9ddbeb3cda9061acfab71031839e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apikey}&units=metric`;
   console.log(apiUrl);
+  axios.get(apiUrl).then(displayDailyForcast);
 }
 
 function displayWeatherCondition(response) {
@@ -62,7 +63,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   );
-  function getForcast(response.data.coord);
+  getForcast(response.data.coord);
 }
 
 function handleSubmit(event) {
@@ -101,6 +102,7 @@ function displayCelsius(event) {
 }
 
 function displayDailyForcast(response) {
+  console.log(response.data.daily);
   let forcastElement = document.querySelector("#forcast");
   let forcastHtml = `<div class="row">`;
   let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri"];
@@ -142,4 +144,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 search("New York");
-displayDailyForcast();
